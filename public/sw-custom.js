@@ -1,9 +1,9 @@
 var cacheName = 'cache-v1'
 
 var resourcesToPrecache = [
-    '/',
-    'index.html',
-    '*.js'
+    './',
+    './index.html',
+    './js/dist.js'
 ]
 
 self.addEventListener('install', e => {

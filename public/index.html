@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
 
     <!--PWA-->
-    <link rel=icon type=image/png sizes=32x32 href=/img/icons/favicon-32x32.png>
-    <link rel=icon type=image/png sizes=16x16 href=/img/icons/favicon-16x16.png>
-    <link rel=manifest href=/manifest.json>
+    <link rel=icon type=image/png sizes=32x32 href=./img/icons/favicon-32x32.png>
+    <link rel=icon type=image/png sizes=16x16 href=./img/icons/favicon-16x16.png>
+    <link rel=manifest href=./manifest.json>
     <meta name=theme-color content=#4DBA87>
     <meta name=apple-mobile-web-app-capable content=no>
     <meta name=apple-mobile-web-app-status-bar-style content=default>
     <meta name=apple-mobile-web-app-title content=phonebook-vue>
-    <link rel=apple-touch-icon href=/img/icons/apple-touch-icon-152x152.png>
-    <link rel=mask-icon href=/img/icons/safari-pinned-tab.svg color=#4DBA87>
+    <link rel=apple-touch-icon href=./img/icons/apple-touch-icon-152x152.png>
+    <link rel=mask-icon href=./img/icons/safari-pinned-tab.svg color=#4DBA87>
     <meta name=msapplication-TileImage content=/img/icons/msapplication-icon-144x144.png>
     <meta name=msapplication-TileColor content=#000000>
 </head>
@@ -33,7 +33,7 @@
     <script>
         if ('serviceWorker' in window.navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw-custom.js')
+                navigator.serviceWorker.register('./sw-custom.js')
                     .then(reg => console.log('😀REGGED!!! => ', reg))
                     .catch(err => console.warn(' 🥺REGG ERROR =>', err))
             })

@@ -16,7 +16,7 @@ module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ?
         './' : '',
     assetsDir: "./", //По умолчанию: '' - Каталог (относительно outputDir) для хранения сгенерированных статических ресурсов (js, css, img, fonts).
-    outputDir: "dist",
+    outputDir: "./dist",
     indexPath: "index.html", //умолч -'index.html'-относительно outputDir
     filenameHashing: false,
     chainWebpack: config => {
