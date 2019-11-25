@@ -34,7 +34,7 @@
         if ('serviceWorker' in window.navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('./sw-custom.js')
-                    .then(reg => console.log('😀REGGED!!! => ', reg))
+                    .then(reg => console.log('😀REGGED!!! => ', reg.scope, reg))
                     .catch(err => console.warn(' 🥺REGG ERROR =>', err))
             })
         }
