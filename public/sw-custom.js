@@ -14,7 +14,6 @@ self.addEventListener('install', e => {
             return cache.addAll(resourcesToPrecache) // add all files to the cache
         })
     )
-
 })
 
 self.addEventListener('activate', e => {
@@ -27,6 +26,21 @@ self.addEventListener('fetch', e => {
         caches.match(e.request)
         .then(cachedResponse => {
             return cachedResponse || fetch(e.request) // <- the cache-first strategy
+        })
+    )
+})
+
+self.addEventListener('push', e => {
+    console.log('push event => ', e)
+    const title = 'MSG!'
+    const body = 'Тело сообщения => ' + e.data.text()
+    const icon = './img/icons/android-chrome-192x192.png'
+    const tag = 'пример-тега'
+    e.waitUntil(
+        self.registration.showNotification(title, {
+            body,
+            icon,
+            tag
         })
     )
 })
